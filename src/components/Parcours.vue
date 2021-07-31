@@ -6,18 +6,54 @@
         </div>
         <div class="fresque">
         <img src="../assets/fresque2.svg" class="svgfresque"/>
-        <img src="../assets/fresquerog2.svg" class="svgfresquerog"/>
-        <img src="../assets/fresquephone.svg" class="svgfresquephone"/>
+        </div>
+        <div class="slidez">
+        <vueper-slides slide-image-inside :slide-ratio="1 / 3" :breakpoints="breakpoints">
+  <vueper-slide v-for="(slide, i) in slides" :key="i" :title="slide.title" :image="slide.image" :content="slide.content" :link="slide.link" />
+</vueper-slides>
         </div>
     </div>
 
 </template>
 
 <script>
-
+import { VueperSlides, VueperSlide } from 'vueperslides'
+import 'vueperslides/dist/vueperslides.css'
 
 export default{
     name: 'Parcours',
+    components:{
+        VueperSlides, VueperSlide
+    },
+    data(){
+        return{
+            slides:[
+                {
+                    image: require('@/assets/fresquePhone1.png'),
+                },
+                {
+                    image: require('@/assets/fresquePhone2.png'),
+                },
+            ],
+             breakpoints: {
+            1200: {
+            slideRatio: 1 / 5
+            },
+            900: {
+            slideRatio: 1 / 3
+            },
+            600: {
+            slideRatio: 1 / 2,
+            arrows: false,
+            bulletsOutside: true
+            },
+    // The order you list breakpoints does not matter, Vueper Slides will sort them for you.
+            1100: {
+            slideRatio: 1 / 4
+    }
+  },
+        }
+    }
 }
 </script>
 
@@ -30,10 +66,9 @@ export default{
 }
 
 #sectionParcours{
-    display: flex;
+    //display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    //align-items: center;
     row-gap : 2rem;
     position: relative;
     top: 6%;
@@ -85,7 +120,9 @@ object-fit: contain;
 
 ///////////// TABLET PHONE
 @media screen and (max-width: 525px) {
-    .svgfresque{
+
+
+    .fresque{
       display: none;
     }
     .svgfresquephone{
@@ -117,12 +154,14 @@ object-fit: contain;
 }
 
 @media screen and (min-width: 526px){
+
+    .slidez{
+        display: none;
+    }
     .svgfresquerog{
         display: none;
     }
-    .svgfresquephone{
-        display: none;
-    }
+
 }
 
 </style>
