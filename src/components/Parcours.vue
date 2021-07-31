@@ -3,7 +3,6 @@
     <div id="sectionParcours">
         <div class="titleSectionParcours">
             <h4>Parcours</h4>
-            <Burger></Burger>
         </div>
         <div class="fresque">
         <img src="../assets/fresque2.svg" class="svgfresque"/>
@@ -15,13 +14,10 @@
 </template>
 
 <script>
-import Burger from '@/components/menu/Burger.vue';
+
 
 export default{
     name: 'Parcours',
-    components:{
-        Burger
-    }
 }
 </script>
 
@@ -39,6 +35,8 @@ export default{
     flex-direction: column;
     //align-items: center;
     row-gap : 2rem;
+    position: relative;
+    top: 6%;
 
 }
 
@@ -53,12 +51,7 @@ export default{
 .titleSectionParcours h4{
     display: flex;
     flex-direction: row;
-    //justify-content: center;
-    /*text-transform: uppercase;*/
-    font-weight: 100;
     font-size: 2.8em;
-    //font-family: Avenir, sans;
-    font-family: 'Zen Tokyo Zoo', cursive !important;
     line-height: 0.5;
     margin-bottom: 0px;
     border-bottom: 30px solid #7451eb;
@@ -102,9 +95,10 @@ object-fit: contain;
         object-fit: cover;
         height: 350px;
     }
-        .titleSectionParcours h4{
+    .titleSectionParcours h4{
         width: 200px !important;
         margin: 47.667px 0px 0px 0px;
+        font-size: 1.5rem;
     }
 
     #sectionParcours{

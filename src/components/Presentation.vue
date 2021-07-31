@@ -7,9 +7,11 @@
             <div class="littleText wordCarousel">         
 
             <p class="textPresentation">  
-                Bienvenue sur mon site. Je m'appelle Benoît et je suis <span class="dev">intégrateur web</span>. <br/>
-                Doublement diplômé de chez <span class="openC">OpenClassrooms</span>,
-                je travaille essentiellement sur CMS et VueJS.</p>
+                Bienvenue sur mon site. Je m'appelle Benoît et je suis <br/>
+                doublement diplômé de chez OpenClassrooms.
+                Je suis spécialisé sur le CMS WordPress. <br/> 
+                Maitrîsant le html et CSS, je suis aussi compétent en JavaScript et sur différents frameworks (tel que NodeJS, et VueJS) me permettant de travailler sur du fullstack.<br/>
+                </p>
             </div>
         </div>
     </div>
@@ -32,6 +34,9 @@ export default{
     flex-wrap: wrap;
     max-width: 100%;
     width: 100%;
+    //background: red;
+    position: relative;
+    top: 15%;
 }
 
 #pictext{
@@ -60,22 +65,14 @@ export default{
     max-width: 50%;
     max-height: 100%;
     object-fit: contain;
-    filter: drop-shadow(15px 7px 10px rgba(0, 0, 0, 0.5))
+    filter: drop-shadow(15px 7px 5px rgba(0, 0, 0, 0.288));
+    border-radius: 100%
 }
 
-/*.littleText{
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 1 1 auto;
- 
-}*/
 
 .textPresentation{
     font-size: 1.5em;
-    text-align: center;
+
 
 }
 

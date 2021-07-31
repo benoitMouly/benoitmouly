@@ -2,53 +2,52 @@
   <div id="sectionCompetence">
             <div class="titleSection titleSectionComp">
             <h4>Compétences</h4>
-            <Burger></Burger>
             </div>
     <div class="bars">
 
-      <div class="bar1">
+      <div class="bar">
         <h4 class="centered">HTML5</h4>
       <div class="progress-bar">
         <div data-size="90" class="progress color0">90%</div>
       </div>
       </div>
 
-      <div class="bar2">
+      <div class="bar">
         <h4>JavaScript</h4>
       <div class="progress-bar">
         <div data-size="70" class="progress color1">70%</div>
       </div>
       </div>
 
-      <div class="bar3">
+      <div class="bar">
         <h4>NodeJs (express)</h4>
       <div class="progress-bar">
         <div data-size="70" class="progress color2">70%</div>
       </div>
       </div>
 
-      <div class="bar4">
+      <div class="bar">
         <h4>SCSS</h4>
       <div class="progress-bar">
         <div data-size="55" class="progress color3">55%</div>
       </div>
       </div>
 
-        <div class="bar5">
+        <div class="bar">
           <h4>VueJs</h4>
       <div class="progress-bar">
         <div data-size="65" class="progress color4">65%</div>
       </div>
       </div>
 
-              <div class="bar6">
+        <div class="bar">
           <h4>PHP</h4>
       <div class="progress-bar">
-        <div data-size="65" class="progress color5">25%</div>
+        <div data-size="25" class="progress color5">25%</div>
       </div>
       </div>
 
-              <div class="bar7">
+        <div class="bar">
           <h4>WordPress (builders)</h4>
       <div class="progress-bar">
         <div data-size="70" class="progress color6">70%</div>
@@ -60,13 +59,10 @@
 </template>
 
 <script>
-import Burger from '@/components/menu/Burger.vue';
 
 export default{
     name: 'Competences',
-    components:{
-      Burger
-    },
+
 
   methods:{
     progressBar(){
@@ -96,48 +92,28 @@ export default{
   flex-direction: column;
   max-height: 100%;
   row-gap: 2rem;
+  position: relative;
+  top: 6%;
 }
 
-.titleSectionComp{
+/*.titleSectionComp{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
     margin: 0px 20px 0px 20px;
-}
+}*/
 .titleSection{
   height: 30%;
 }
-/*h4{
-    display: flex;
-    flex-direction: row;
-    //justify-content: center;
-    //text-transform: uppercase;
-    font-weight: 100;
-    font-size: 1.3em;
-    //font-family: Avenir, sans;
-    line-height: 0.5;
-    margin-bottom: 0px;
-    border-bottom: 30px solid #7451eb;
-    border-bottom-width: 3px;
-    border-bottom-style: ridge;
-    border-bottom-color: #eb517f;
-    display: inline-block;
-    padding-bottom: 10px;
-    font-family: sans-serif;
-    color: rgb(219, 219, 219);
-    margin: 47.667px 0px 0px 50px;
-    
-}*/
+
 .titleSection h4{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /*text-transform: uppercase;*/
     font-weight: 100;
     font-size: 2.8em;
-    //font-family: Avenir, sans;
     font-family: 'Zen Tokyo Zoo', cursive !important;
     line-height: 0.5;
     margin-bottom: 0px;
@@ -150,10 +126,9 @@ export default{
     padding-bottom: 10px;
     font-family: sans-serif;
     width: 300px;
-    //color: #7451eb;
     color: rgb(219, 219, 219);
-    //margin: 47.667px 0px 0px 50px;
     text-align: center;
+    margin: 47.667px 0px 0px 50px;
     
 }
 
@@ -166,9 +141,21 @@ export default{
   max-height: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 }
 
+.bars::after{
+  flex: auto;
+}
+
+.bar h4{
+margin-left: 15px;
+//color: green;
+
+}
+.centered{
+  text-align: left;
+}
 
 .progress-bar {
   background-color: #20252c;
@@ -186,21 +173,20 @@ export default{
 }
 
 .progress {
-  /*background: #ad5389;
-  background: -webkit-linear-gradient(to bottom, #3c1053, #ad5389);
-  background: linear-gradient(to bottom, #3c1053, #ad5389);*/
+
   border-radius: 6px;
   height: 30px;
   width: 0;
   transition: width 2s ease-in;
 }
+
+
 @media screen and (min-width: 750px) and (max-width: 800px){
   .progress-bar{
     width: 180px;
     height: 20px;
   }
   .progress{
-    //width: 180px;
     height: 20px;
     font-size: 1rem;
   }
@@ -212,7 +198,6 @@ export default{
     font-size: 1rem;
   }
     .progress{
-    //width: 3500px;
     height: 15px;
     font-size: 0.8rem;
   }
@@ -223,7 +208,6 @@ export default{
     height: 15px;
   }
   .progress{
-    //width: 120px;
     height: 15px;
     font-size: 1rem;
   }

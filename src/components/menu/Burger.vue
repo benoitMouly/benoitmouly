@@ -47,12 +47,13 @@
         height: 30px;
         width: 32px;
         display: block;
-        z-index: 999;
+        z-index: 9999;
         border: 0;
         border-radius: 0;
         background-color: transparent;
         pointer-events: all;
         transition: transform .6s cubic-bezier(.165,.84,.44,1);
+        margin: 0px 20px 0px 0px;
     }
 
     .burger-bar {

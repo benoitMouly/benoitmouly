@@ -2,17 +2,15 @@
         <div id="sectionHobbies">
             <div class="titleSection titleSectionHobb">
                 <h4>Benoît</h4>
-                <Burger></Burger>
             </div>
            <div class="jumbotron">
-					<div v-for='(Experience, experienceIndex) in Experiences' :key="experienceIndex">
+					<div v-for='(Experience, experienceIndex) in Experiences' :key="experienceIndex" class="deroule">
 						<div class="accordion"
 					v-on:click="open(experienceIndex)">
-							<a :href="Experience.href" target="_blank"></a> 
 							<span> {{Experience.title}} <i :class="Experience.chevron"></i>
 							</span> 
 						</div>
-						<div :class="Experience.class">
+						<div :class="Experience.class" class="panel">
 							{{Experience.description}}
 						</div>
 				</div>
@@ -22,13 +20,10 @@
 </template>
 
 <script>
-import Burger from '@/components/menu/Burger.vue';
+
 
 export default{
     name: 'Hobbies',
-    components:{
-      Burger
-    },
     data(){
         return{
     
@@ -101,12 +96,29 @@ methods : {
           this.Experiences[element].chevron = 'fa fa-chevron-down';
           this.isOpen = false;
         }
-        }
+      },
+      show(){
+   var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+      }
     },
 
     unmounted(){
       this.open();
       this.hide();
+      this.show();
     }
     
 }
@@ -121,6 +133,8 @@ methods : {
   flex-wrap: wrap;
   justify-content:flex-end;
   column-gap: 200px;
+  position: relative;
+  top: 6%;
 }
 
 .titleSectionHobb{
@@ -143,15 +157,16 @@ methods : {
     
 		font-size:20px;
 		margin-left:10px;
+    transition: 0.4s;
  }
 
   .show {
     visibility: visible;
     opacity: 1;
-    transition: visibility 0s linear 0s, opacity 1100ms;
+    transition: visibility 0s linear 0s, opacity 1800ms;
     text-align: left;
     color: #f8f1ff;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 100px;
     padding-left: 1.5em;
   }
@@ -160,10 +175,14 @@ methods : {
     visibility: hidden;
     opacity: 0;
     height: 0;
-    -moz-transition: height 2s ease;
-    -webkit-transition: height 2s ease;
-    -o-transition: height 2s ease;
-    transition: height 2s ease;
+    /*-moz-transition: height 1s ease;
+    -webkit-transition: height 1s ease;
+    -o-transition: height 1s ease;
+    transition: height 1s ease;*/
+    -moz-transition: height 1s;
+    -webkit-transition: height 1s;
+    -o-transition: height 1s;
+    transition:  height 1s ;
   }
 
   .accordion {
@@ -174,6 +193,14 @@ methods : {
     overflow: hidden;
     font-weight: 800;
     text-decoration: underline double #eb517f 1.5px;
+    -webkit-transition: 0.3s;
+    -o-transition: height  0.3s;
+    -moz-transition:  0.3s;
+    transition: 0.4s;
+  }
+
+  .deroule{
+    transition: 0.4s;
   }
 
   .fa-chevron-down, .fa-chevron-up{
@@ -184,6 +211,7 @@ methods : {
   .fa-chevron-up{
     color: #eb517f;
   }
+
 
   @media screen and (max-width: 800px) {
     .show {

@@ -2,7 +2,6 @@
     <div id="sectionAbout">
         <div class="titleSection titleSectionAbout">
             <h4>Contact</h4>
-            <Burger></Burger>
         </div>
         <div class="icons">
             <div class="email">
@@ -24,7 +23,7 @@
 </template>
 
 <script>
-import Burger from '@/components/menu/Burger.vue';
+
 
 export default{
     name: 'About',
@@ -33,9 +32,7 @@ export default{
             siteName: "benoitmouly"
         }
     },
-    components:{
-        Burger
-    },
+
 computed: {
 copyright() {
 const currentYear = new Date().getFullYear()
@@ -47,11 +44,13 @@ return `Copyright ${this.siteName} ${currentYear}`
 
 <style lang="scss">
 
-#sectionContact{
+#sectionAbout{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: relative;
+    top: 6%;
 }
 
 .titleSectionAbout{

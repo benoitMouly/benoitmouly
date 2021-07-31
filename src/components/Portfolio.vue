@@ -2,7 +2,6 @@
     <div id="sectionPort">
             <div class="titleSectionPort">
                 <h4>Portfolio</h4>
-                <Burger></Burger>
             </div>
         <vueper-slides slide-image-inside :slide-ratio="1 / 3" :breakpoints="breakpoints">
   <vueper-slide v-for="(slide, i) in slides" :key="i" :title="slide.title" :image="slide.image" :content="slide.content" :link="slide.link" />
@@ -13,13 +12,13 @@
 <script>
 import { VueperSlides, VueperSlide } from 'vueperslides'
 import 'vueperslides/dist/vueperslides.css'
-import Burger from '@/components/menu/Burger.vue';
+
 
 export default{
     
     name: 'Portfolio',
     components:{
-        VueperSlides, VueperSlide, Burger
+        VueperSlides, VueperSlide
     },
     data (){
         return{
@@ -92,9 +91,11 @@ export default{
     justify-content: space-between;
     column-gap: normal;
     overflow: hidden;
+    position: relative;
+    top: 6%;
 }
 .titleSectionPort{
-        display: flex;
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -106,9 +107,9 @@ export default{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    font-weight: 100;
+    font-weight: 700;
     font-size: 2.8em;
-    font-family: 'Zen Tokyo Zoo', cursive !important;
+    font-family: MontSerrat;
     line-height: 0.5;
     margin-bottom: 0px;
     border-bottom: 30px solid #7451eb;
@@ -182,9 +183,10 @@ a:visited {
 }
 
 .titleSectionPort h4{
-    display: flex;
+    
     width: 200px !important;
     margin: 47px 0px 0px 0px;
+    font-size: 1.5rem;
     
 }
 .vueperslides{
