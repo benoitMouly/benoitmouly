@@ -125,10 +125,10 @@ export default{
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -162,10 +162,11 @@ export default{
 }
 
 body {
-  font-family: Avenir, Montserrat, Roboto, ZenTokyoZoo-Regular, Arial, sans-serif;
+  font-family: Montserrat, Roboto, ZenTokyoZoo-Regular, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 0.8rem;
+  font-weight: 500;
   color: #fff;
   max-height: 100%;
   max-width: 100%;
@@ -286,4 +287,54 @@ body {
 
  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 
+///////////////////////// VUEPERSLIDES
+
+.vueperslide__image {
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.vueperslide__title {
+    position: absolute;
+    font-size: 1.2rem;
+    opacity: 0.7;
+    background: #f15454;
+    color: white;
+    padding: 0px 5px 0px 5px;
+    text-align: left;
+    top: 25%;
+}
+
+.vueperslide__content {
+    position: absolute;
+    text-align: left;
+    top: 45%;
+    margin-top: 1em;
+    z-index: 2;
+    color: white;
+    font-size: 0.52rem;
+  }
+
+.vueperslides__bullets{
+    color: #eb517f !important;
+    position: inherit;
+}
+
+a:visited {
+  color: white;
+}
+
+.vueperslides__arrow:hover{
+    color: #eb517f;
+}
+
+.vueperslides__parallax-wrapper::before{
+    box-shadow: none !important;
+}
+
+.vueperslides__parallax-wrapper::after{
+    box-shadow: none !important;
+}
 </style>

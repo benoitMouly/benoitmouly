@@ -65,7 +65,7 @@ export default{
     max-width: 50%;
     max-height: 100%;
     object-fit: contain;
-    filter: drop-shadow(15px 7px 5px rgba(0, 0, 0, 0.288));
+    filter: drop-shadow(15px 7px 5px rgba(0, 0, 0, 0.171));
     border-radius: 100%
 }
 
@@ -130,18 +130,8 @@ export default{
     row-gap: 2rem;
 }
 
-.littleText{
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 1 1 auto;
- 
-}
-
 .textPresentation{
-    font-size: 4vw;
+    font-size: 0.8rem;
     text-align: center;
 }
 

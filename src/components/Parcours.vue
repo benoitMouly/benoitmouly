@@ -8,9 +8,9 @@
         <img src="../assets/fresque2.svg" class="svgfresque"/>
         </div>
         <div class="slidez">
-        <vueper-slides slide-image-inside :slide-ratio="1 / 3" :breakpoints="breakpoints">
-  <vueper-slide v-for="(slide, i) in slides" :key="i" :title="slide.title" :image="slide.image" :content="slide.content" :link="slide.link" />
-</vueper-slides>
+            <vueper-slides  slide-image-inside :slide-ratio="1 / 3" :breakpoints="breakpoints">
+                <vueper-slide v-for="(slide, i) in slides" :key="i"  :image="slide.image"/>
+            </vueper-slides>
         </div>
     </div>
 
@@ -29,10 +29,10 @@ export default{
         return{
             slides:[
                 {
-                    image: require('@/assets/fresquePhone1.png'),
+                    image: require('../assets/phoneFresque2.svg'),
                 },
                 {
-                    image: require('@/assets/fresquePhone2.png'),
+                    image: require('@/assets/phoneFresque1.svg'),
                 },
             ],
              breakpoints: {
@@ -60,33 +60,37 @@ export default{
 
 <style lang="scss" scoped>
 
-#container{
+#sectionParcours{
     max-height: 100%;
     max-width: 100%;
 }
 
 #sectionParcours{
-    //display: flex;
-    flex-wrap: wrap;
+    display: flex;
     flex-direction: column;
-    row-gap : 2rem;
+    //justify-content: center;
+    //align-items: center;
+    //row-gap : 2rem;
+    flex-wrap: wrap;
     position: relative;
     top: 6%;
 
 }
 
 .titleSectionParcours{
-    display: flex;
+   /* display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    overflow: hidden;
+    overflow: hidden;*/
     margin: 0px 20px 0px 20px;
-}
+} 
 .titleSectionParcours h4{
     display: flex;
     flex-direction: row;
+    font-weight: 700;
     font-size: 2.8em;
+    font-family: 'MontSerrat', cursive !important;
     line-height: 0.5;
     margin-bottom: 0px;
     border-bottom: 30px solid #7451eb;
@@ -99,7 +103,7 @@ export default{
     font-family: sans-serif;
     width: 300px;
     color: rgb(219, 219, 219);
-    margin: 47.667px 0px 0px 50px;
+    margin: 47.667px 0px 0px 0px;
     text-align: center;
     
 }
@@ -113,44 +117,49 @@ export default{
     height: 40%;
 }
 .svgfresque{
-margin-top: 0rem;
+margin-top: 0rem !important;
 object-fit: contain;
+
 }
 
 
 ///////////// TABLET PHONE
 @media screen and (max-width: 525px) {
 
-
+    #sectionParcours{
+    display: block;
+    row-gap : 2rem;
+    top: 10%;
+    }
     .fresque{
       display: none;
     }
+
     .svgfresquephone{
         display: none;
     }
-    .svgfresquerog{
-        object-fit: cover;
-        height: 350px;
-    }
+
+
     .titleSectionParcours h4{
-        width: 200px !important;
-        margin: 47.667px 0px 0px 0px;
+        width: 200px;
+        margin: 47.667px 0px 50px 0px;
         font-size: 1.5rem;
+        text-align: center;
     }
 
-    #sectionParcours{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    row-gap : 2rem;
-
-}
     .titleSectionParcours{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column-reverse;
+        display: block;
     }
+
+   
+
+    .titleSectionParcours{
+        /*display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;*/
+        text-align: center;
+    }
+
 }
 
 @media screen and (min-width: 526px){
@@ -158,10 +167,18 @@ object-fit: contain;
     .slidez{
         display: none;
     }
-    .svgfresquerog{
-        display: none;
-    }
+}
 
+@media screen and (max-width: 524px){
+    .titleSectionParcours{
+        max-width: 100%;
+        margin: 47px 0px 0px 0px;
+        text-align: center;
+}
+
+    #sectionParcours{
+    row-gap : 2rem;
+    }
 }
 
 </style>

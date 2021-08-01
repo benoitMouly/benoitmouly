@@ -96,14 +96,7 @@ export default{
   top: 6%;
 }
 
-/*.titleSectionComp{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    overflow: hidden;
-    margin: 0px 20px 0px 20px;
-}*/
+
 .titleSection{
   height: 30%;
 }
@@ -150,7 +143,7 @@ export default{
 
 .bar h4{
 margin-left: 15px;
-//color: green;
+
 
 }
 .centered{
@@ -212,6 +205,9 @@ margin-left: 15px;
     font-size: 1rem;
   }
 }
+
+
+
 //////////// TABLET PHONE
 @media screen and (max-width: 525px) {
 
@@ -232,11 +228,12 @@ margin: 47px 0px 0px 0px;
   font-size: 0.8rem;
 }
 
-    .titleSectionComp{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column-reverse;
-    }
+.titleSectionComp{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+}
+
 }
 
 .color0{

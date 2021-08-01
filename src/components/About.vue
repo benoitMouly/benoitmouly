@@ -103,6 +103,7 @@ return `Copyright ${this.siteName} ${currentYear}`
     font-weight: 600;
     line-height: 1.3rem;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .btnCv:hover{
