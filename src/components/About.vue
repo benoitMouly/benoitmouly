@@ -78,6 +78,7 @@ return `Copyright ${this.siteName} ${currentYear}`
 
 .fa-at:hover, .fa-github:hover, .fa-linkedin-in:hover{
     color: #eb517f;
+    transition: all 0.45s ease;
 }
 .iconref{
     color: white;
@@ -86,6 +87,7 @@ return `Copyright ${this.siteName} ${currentYear}`
 }
 .iconref:hover{
     color: #eb517f;
+    transition: all 0.45s ease;
 }
 .cv{
     text-align: center;
@@ -111,6 +113,7 @@ return `Copyright ${this.siteName} ${currentYear}`
     border: 5px double #eb517f;
     border-bottom: 5px double white;
     border-top: 5px double white;
+    transition: all 0.45s ease-in-out;
 }
 
 ////// 
@@ -157,6 +160,7 @@ return `Copyright ${this.siteName} ${currentYear}`
 .cv{
     text-align: center;
     margin: 0rem 0 0 0;
+    
 }
 .btnCv{
     display: inline-block;

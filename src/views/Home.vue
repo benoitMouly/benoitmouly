@@ -27,7 +27,7 @@ import Hobbies from '../components/Hobbies.vue'
 
 export default {
     name:'Home',
-  components: { //Presentation, footerElement
+  components: {
   Parcours, Competences, Portfolio, Hobbies
   },
 

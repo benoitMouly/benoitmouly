@@ -7,8 +7,8 @@
             <div class="littleText wordCarousel">         
 
             <p class="textPresentation">  
-                Bienvenue sur mon site. Je m'appelle Benoît et je suis <br/>
-                doublement diplômé de chez OpenClassrooms.
+                Bienvenue sur mon site. Je m'appelle Benoît et je suis
+                doublement diplômé de chez OpenClassrooms. <br>
                 Je suis spécialisé sur le CMS WordPress. <br/> 
                 Maitrîsant le html et CSS, je suis aussi compétent en JavaScript et sur différents frameworks (tel que NodeJS, et VueJS) me permettant de travailler sur du fullstack.<br/>
                 </p>
@@ -34,7 +34,6 @@ export default{
     flex-wrap: wrap;
     max-width: 100%;
     width: 100%;
-    //background: red;
     position: relative;
     top: 15%;
 }
@@ -91,10 +90,10 @@ export default{
 
 
 @media screen and (max-width: 680px){
-  #sectionPresentation{
-    flex-direction: column;
-    row-gap: 10px;
-  }
+    #sectionPresentation{
+        flex-direction: column;
+        row-gap: 10px;
+    }
 }
 
 
@@ -119,42 +118,43 @@ export default{
 
 //////////// TABLET PHONE
 @media screen and (max-width: 525px) {
-#pictext{
-    display: flex;
-    max-width: 100%;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    margin: 5%;
-    row-gap: 2rem;
+    #pictext{
+        display: flex;
+        max-width: 100%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        margin: 5%;
+        row-gap: 2rem;
 }
 
-.textPresentation{
-    font-size: 0.8rem;
-    text-align: center;
-}
+    .textPresentation{
+        font-size: 0.8rem;
+        text-align: center;
+    }
 
-.openC{
-    color: #7451eb;
-    font-weight: bold;
-    margin: 0;
-    font-size: auto;
-}
+    .openC{
+        color: #7451eb;
+        font-weight: bold;
+        margin: 0;
+        font-size: auto;
+    }
 
-.dev{
-    color: #ec2b5b;
-    font-weight: bold;
-    margin: 0;
-    font-size: auto;
-}
-.icondown{
-    position: absolute;
-    font-size: 3vw;
-    text-align: center;
-    flex: 0 0 100%;
-    margin: 0 0 0 0;
-    color: green;
-}
+    .dev{
+        color: #ec2b5b;
+        font-weight: bold;
+        margin: 0;
+        font-size: auto;
+    }
+
+    .icondown{
+        position: absolute;
+        font-size: 3vw;
+        text-align: center;
+        flex: 0 0 100%;
+        margin: 0 0 0 0;
+        color: green;
+    }
 }
 </style>

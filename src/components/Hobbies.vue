@@ -151,6 +151,7 @@ for (i = 0; i < acc.length; i++) {
   height: 100%;
   display: block;
   margin: 60px;
+  transition: all 0.4s ease;
 
 }
  span {
@@ -158,31 +159,24 @@ for (i = 0; i < acc.length; i++) {
 		font-size:20px;
 		margin-left:10px;
     transition: 0.4s;
+    transition: all 0.4s ease;
  }
 
   .show {
     visibility: visible;
-    opacity: 1;
-    transition: visibility 0s linear 0s, opacity 1800ms;
     text-align: left;
     color: #f8f1ff;
     font-size: 20px;
     font-weight: 100px;
     padding-left: 1.5em;
+    transition: all 0.4s ease;
   }
 
   .hide {
     visibility: hidden;
     opacity: 0;
     height: 0;
-    /*-moz-transition: height 1s ease;
-    -webkit-transition: height 1s ease;
-    -o-transition: height 1s ease;
-    transition: height 1s ease;*/
-    -moz-transition: height 1s;
-    -webkit-transition: height 1s;
-    -o-transition: height 1s;
-    transition:  height 1s ;
+    transition: all 0.1s ease;
   }
 
   .accordion {
@@ -193,10 +187,7 @@ for (i = 0; i < acc.length; i++) {
     overflow: hidden;
     font-weight: 800;
     text-decoration: underline double #eb517f 1.5px;
-    -webkit-transition: 0.3s;
-    -o-transition: height  0.3s;
-    -moz-transition:  0.3s;
-    transition: 0.4s;
+    transition: all 0.25s ease;
   }
 
   .deroule{
@@ -253,6 +244,7 @@ span {
         flex-wrap: wrap;
         flex-direction: column-reverse;
 }
+
 }
 
 </style>

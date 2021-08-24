@@ -6,8 +6,6 @@ import Home from "../views/Home.vue";
 const scrollBehavior = (to) => {
   if (to.hash) {
       return {selector: to.hash}
-      //Or for Vue 3:
-      //return {el: to.hash}
   } else {
       return { x: 0, y: 0 }
   }
@@ -41,14 +39,7 @@ const routes = [
 
   }
   },
-  {
-  path: '/contact',
-  name: 'contact',
-  component: () => import('../components/Contact.vue'),
-  meta: {
 
-  }
-  },
   {
   path: '/#competences',
   name: 'Competences',

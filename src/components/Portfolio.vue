@@ -4,7 +4,7 @@
                 <h4>Portfolio</h4>
             </div>
             <vueper-slides slide-image-inside :slide-ratio="1 / 3" :breakpoints="breakpoints">
-                <vueper-slide v-for="(slide, i) in slides" :key="i" :title="slide.title" :image="slide.image" :content="slide.content" :link="slide.link" />
+                <vueper-slide v-for="(slide, i) in slides" :key="i" :title="slide.title" :image="slide.image" :content="slide.content" :link="slide.link" open-in-new />
             </vueper-slides>
     </div>
 </template>
@@ -25,31 +25,31 @@ export default{
         slides: [
             {
             title:'DROPHEAR',
-            content: '<b>Notre plus beau projet</b> </br> - Un projet personnel qui est un laboratoire reprenant toute ma curiosité : <br> le développement web, la musique, utiliser des outils par curiosité... </br> <i><u>Technologies</u> : WordPress, Oxygen(anciennement sous Elementor), ACF </i></br> Sans oublier Photoshop, Sony Vegas, Illustrator',
+            content: '<b>Notre plus beau projet</b> </br> <br> - Un projet personnel qui est un laboratoire reprenant toute ma curiosité : <br> le développement web, la musique, utiliser des outils par curiosité... </br> <i><u>Technologies</u> : WordPress, Oxygen(anciennement sous Elementor), ACF </i></br> Sans oublier Photoshop, Sony Vegas, Illustrator',
             image: require('@/assets/bmdrop.png'),
             link: "https://drophear.com/"
             },
             {
             title: 'StaffMe Academy',
-            content: '<b>Une alternance formatrice</b> </br> - Intégration de maquettes venant du marketing, avec notamment <br> les contraintes d\'utilisation et d\'administration </br> <i><u>Technologies</u> : WordPress, Elementor, Advance Custom Fields </i>',
+            content: '<b>Une alternance formatrice</b> </br> </br> - Intégration de maquettes venant du marketing, avec notamment <br> les contraintes d\'utilisation et d\'administration </br> <i><u>Technologies</u> : WordPress, Elementor, Advance Custom Fields </i>',
             image: require('@/assets/sma.png'),
             link:"https://staffmeacademy.fr/"
             },
             {
             title:'OpenClassrooms #1',
-            content:'<b>La magie de Node, Sequelize & VueJs</b> </br>- Ultime projet d\'intégration fullstack.</br> <i><u>Technologies</u> : Node, Vue, JavaScript, Sequelize ORM, MySQL</i></br>',
+            content:'<b>La magie de Node, Sequelize & VueJs</b> </br> </br> - Ultime projet d\'intégration fullstack.</br> <i><u>Technologies</u> : Node, Vue, JavaScript, Sequelize ORM, MySQL</i></br>',
             image: require('@/assets/p7officiel.png'),
             link: "https://github.com/benoitMouly/BenoitMouly_7_30052021"
             },
             {
             title:'OpenClassrooms #2',
-            content: '<b>From scratch</b> </br> - Un projet OpenClassrooms formateur en termes d\'intégrations <br> en respectant au pixel la maquette donnée. </br> <i><u> Technologies </u> : HTML5 , CSS3</i> ',
+            content: '<b>From scratch</b> </br> </br>- Un projet OpenClassrooms formateur en termes d\'intégrations <br> en respectant au pixel la maquette donnée. </br> <i><u> Technologies </u> : HTML5 , CSS3</i> ',
             image: require('@/assets/p2officiel.png'),
             link: "https://github.com/benoitMouly/BenoitMouly_2_22102020"
             },
             {
-            title:'Projet OpenClassrooms #3',
-            content: '<b>From scratch SCSS</b> </br> - Un second projet en utilisant cette fois-ci du SASS</br> <i><u> Technologies </u> : HTML5 , SCSS </i>',
+            title:'OpenClassrooms #3',
+            content: '<b>From scratch SCSS</b> </br> </br>- Un second projet en utilisant cette fois-ci du SASS</br> <i><u> Technologies </u> : HTML5 , SCSS </i>',
             image: require('@/assets/p3officiel.png'),
             link: "https://github.com/benoitMouly/BenoitMouly_3_23122020"
             },
@@ -74,8 +74,8 @@ export default{
             bulletsOutside: true
             },
             1500:{
-                slideRatio: 1/4,
-                bulletsOutside: true
+            slideRatio: 1/4,
+            bulletsOutside: true
             }
   
     // The order you list breakpoints does not matter, Vueper Slides will sort them for you.
@@ -95,9 +95,8 @@ export default{
     flex-direction: column;
     justify-content: space-between;
     column-gap: normal;
-    //overflow: hidden;
     position: relative;
-    top: 6%;
+    top: 4%;
 }
 .titleSectionPort{
     display: flex;
@@ -135,54 +134,55 @@ export default{
 .titleSectionPort h4:hover{
     color: blanchedalmond;
     border-bottom-color: #7451eb;
+    transition: all 0.45s ease;
 }
+@media screen and (min-width: 526px) {
 
+    .vueperslide__title{
+        font-size: 2.5em !important;
+    }
 
+    .vueperslide__content{
+        font-size: 0.8rem !important;
+    }
+}
 
 ////// TABLET PHONE 
 @media screen and (max-width: 525px) {
 
-#sectionPort{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    //align-items: center;
-    row-gap : 2rem;
-}
+    #sectionPort{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        row-gap : 2rem;
+    }
 
-.titleSectionPort h4{
+    .titleSectionPort h4{
     
-    width: 200px !important;
-    margin: 47px 0px 0px 0px;
-    font-size: 1.5rem;
-    
-}
-.vueperslides{
-    //align-self: normal;
-    height: 5%;
-    top: 15%;
-}
+        width: 200px !important;
+        margin: 47px 0px 0px 0px;
+        font-size: 1.5rem;
+    }
 
-.vueperslide__title{
-    font-size: 1.5em;
-    //margin-bottom: 33%;
-}
+    .vueperslides{
+        height: 5%;
+        top: 15%;
+    }
 
-.vueperslide__content{
-    font-size:2rem;
+    .vueperslide__title{
+        font-size: 1.5em;
+    }
 
-   // bottom: 33% !important;
-}
-/*
-.vueperslide__image{
-    background-size: cover;
-}
-*/
-.titleSectionPort{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column-reverse;
-}
+    .vueperslide__content{
+        font-size:2rem;
+    }
+
+
+    .titleSectionPort{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
 
 }
 </style>

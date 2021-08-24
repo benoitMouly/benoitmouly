@@ -68,9 +68,6 @@ export default{
 #sectionParcours{
     display: flex;
     flex-direction: column;
-    //justify-content: center;
-    //align-items: center;
-    //row-gap : 2rem;
     flex-wrap: wrap;
     position: relative;
     top: 6%;
@@ -78,13 +75,9 @@ export default{
 }
 
 .titleSectionParcours{
-   /* display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    overflow: hidden;*/
     margin: 0px 20px 0px 20px;
-} 
+}
+ 
 .titleSectionParcours h4{
     display: flex;
     flex-direction: row;
@@ -111,14 +104,15 @@ export default{
 .titleSectionParcours h4:hover{
     color: blanchedalmond;
     border-bottom-color: #7451eb;
+    transition: all 0.45s ease;
 }
 
 .titleSectionParcours{
     height: 40%;
 }
 .svgfresque{
-margin-top: 0rem !important;
-object-fit: contain;
+    margin-top: 0rem !important;
+    object-fit: contain;
 
 }
 
@@ -127,10 +121,11 @@ object-fit: contain;
 @media screen and (max-width: 525px) {
 
     #sectionParcours{
-    display: block;
-    row-gap : 2rem;
-    top: 10%;
+        display: block;
+        row-gap : 2rem;
+        top: 10%;
     }
+
     .fresque{
       display: none;
     }
@@ -151,12 +146,8 @@ object-fit: contain;
         display: block;
     }
 
-   
-
     .titleSectionParcours{
-        /*display: flex;
-        flex-wrap: wrap;
-        flex-direction: column-reverse;*/
+
         text-align: center;
     }
 
@@ -174,10 +165,10 @@ object-fit: contain;
         max-width: 100%;
         margin: 47px 0px 0px 0px;
         text-align: center;
-}
+    }
 
     #sectionParcours{
-    row-gap : 2rem;
+        row-gap : 2rem;
     }
 }
 

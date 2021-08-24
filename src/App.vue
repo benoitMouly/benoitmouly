@@ -25,7 +25,8 @@
         <li><a href="#page6">CONTACT</a></li>
         </ul>
         </Sidebar>
-    <full-page ref="fullpage" :options="options" id="fullpage">
+
+  <full-page ref="fullpage" :options="options" id="fullpage">
 
       <div class="section">
               
@@ -58,9 +59,12 @@
       </div>
 
       <div class="section">
+
         <About/>
+
       </div>
-    </full-page>
+  </full-page>
+
         <router-view/>
 
   </div>
@@ -86,7 +90,6 @@ export default{
        return{
            options: {
         licenseKey: '9184A28E-25AE41E0-89C41C8F-EEFB035A',
-        //menu: '#mainBlock',
         anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6'],
                 afterLoad: this.afterLoad,
                 navigation: true,
@@ -124,7 +127,6 @@ export default{
   align-items: center;
   max-height: 100%;
   max-width: 100%;
-  //margin: 4px 4px 4px 4px;
   overflow: hidden;
   z-index: 9998;
   position: fixed;
@@ -140,6 +142,7 @@ export default{
 
 #Calque_1:hover{
   fill:#7451eb;
+  transition: all 0.45s ease;
 }
 
 body {
@@ -162,7 +165,6 @@ body {
   color: #fff !important;
   font-size: 1.1rem;
   font-weight: 450;
-  //font-family: 'Roboto', sans-serif;
 }
 
 
@@ -188,7 +190,6 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    //text-transform: uppercase;
     font-weight: 700;
     font-size: 2.8em;
     font-family: 'MontSerrat', cursive !important;
@@ -203,9 +204,7 @@ body {
     padding-bottom: 10px;
     font-family: sans-serif;
     width: 300px;
-    //color: #7451eb;
     color: rgb(219, 219, 219);
-    //margin: 47.667px 0px 0px 50px;
     text-align: center;
     
 }
@@ -213,6 +212,7 @@ body {
 .titleSection h4:hover{
     color: blanchedalmond;
     border-bottom-color: #7451eb;
+    transition: all 0.45s ease;
 }
 
 .down{
@@ -232,18 +232,19 @@ body {
 
 
 @media screen and (max-width: 525px) {
+
     .titleSection h4{
-    width: 200px !important;
-    margin: 47px 0px 0px 0px;
-    font-size: 1.5rem;
+      width: 200px !important;
+      margin: 47px 0px 0px 0px;
+      font-size: 1.5rem;
     }
 
     #sectionParcours{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    row-gap : 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      row-gap : 2rem;
 
     }
 }
@@ -280,8 +281,7 @@ body {
 .vueperslide__title {
     position: absolute;
     font-size: 1.2rem;
-    opacity: 0.7;
-    background: #f15454;
+    background: #000000;
     color: white;
     padding: 0px 5px 0px 5px;
     text-align: left;

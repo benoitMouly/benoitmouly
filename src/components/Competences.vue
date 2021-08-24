@@ -128,6 +128,7 @@ export default{
 .titleSection h4:hover{
     color: blanchedalmond;
     border-bottom-color: #7451eb;
+    transition: all 0.45s ease;
 }
 .bars{
   max-width: 100%;
@@ -135,6 +136,7 @@ export default{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 5% 5% 0% 5%;
 }
 
 .bars::after{
@@ -203,6 +205,9 @@ margin-left: 15px;
   .progress{
     height: 15px;
     font-size: 1rem;
+  }
+  .bars{
+    margin: 0;
   }
 }
 
