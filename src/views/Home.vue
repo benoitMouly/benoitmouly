@@ -13,6 +13,7 @@
       <section class="fullpage">
         <Hobbies/>
       </section>
+
     </div>
 </template>
 

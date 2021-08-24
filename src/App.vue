@@ -65,7 +65,7 @@
       </div>
   </full-page>
 
-        <router-view/>
+
 
   </div>
 
@@ -92,7 +92,7 @@ export default{
         licenseKey: '9184A28E-25AE41E0-89C41C8F-EEFB035A',
         anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6'],
                 afterLoad: this.afterLoad,
-                navigation: true,
+                
                 scrollBar: true
 
       },

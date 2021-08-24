@@ -2,7 +2,6 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import 'fullpage.js/vendors/scrolloverflow' // Optional. When using scrollOverflow:true
-//import 'fullpage.js/vendors/scrollHorizontally' // Optional. When using fullpage extensions
 import VueFullPage from 'vue-fullpage.js'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
